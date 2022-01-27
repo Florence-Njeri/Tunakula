@@ -1,0 +1,23 @@
+<h1>New Food Item</h1>
+
+<%= form_with model: @food_item do |form|%>
+<div>
+<%= form.label :title%>
+<%= form.text_field :title%>
+<% @foodItem.errors.full_messages_for(:title).each do |message| %>
+<div><%= message %></div>
+    <% end %>
+</div>
+
+<div>
+<%= form.label :price%>
+<%= form.text_field :price%>
+<%@foodItem.errors.full_messages_for(:price).each do |message|%>
+ <div><%= message %></div>
+    <% end %>
+</div>
+
+<div>
+<%= form.submit %>
+</div>
+<% end %>
