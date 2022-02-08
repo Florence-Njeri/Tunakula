@@ -8,12 +8,13 @@ class FoodController < ApplicationController
     end
     def new 
         @foodItem = FoodItem.new
+        
     end
     def create 
         @foodItem = FoodItem.new(food_item_params)
 
-        if @article.save
-            redirect_to @article
+        if @foodItem.save
+            redirect_to @foodItem
         else
             render :new, status: :unprocessable_entity
         end
