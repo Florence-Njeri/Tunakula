@@ -1,21 +1,5 @@
-<div class="header-list">
-        <ul>
-          <li>About</li>
-          <li>Food</li>
-          <li>Contact us</li>
-        </ul>
-      </div>
-    </div>
+  <h2>Get your meal delivered to your doorstep in minutes.</h2>
 
-    <div class="main">
-      <div class="copy-container">
-        <h1>HELLO,<span>.</span></h1>
-        <h2>Get your meal delivered to your doorstep in minutes.</h2>
-      </div>
-      
-      <div class="contents">
-        <h3 class="section-title">Food Selection</h3>
-        <ul><ul>
   <% @foodItems.each do |foodItem| %>
   <a href="<%= food_path(foodItem) %>">
     <li>
